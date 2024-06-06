@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: husseinkevpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: husseinkevpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: husseinkevpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: husseinkevpipelinesjavascriptdocker 
+          image: devtestcontainerregistry00.azurecr.io/husseinkevpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
